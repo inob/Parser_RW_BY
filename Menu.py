@@ -12,19 +12,23 @@ class Menu(QDialog):
     def __init__(self):
         super(Menu,self).__init__()
         loadUi("menu.ui",self)
-        self.place1
-        self.password
         self.pushButton.clicked.connect(self.ParsingF)
     
     def ParsingF(self):
-        pass
-
+        place1 = self.lineEdit.text()
+        place2 = self.lineEdit_2.text()
+        date = str(self.dateEdit.text())
+        times = str(self.timeEdit.text())
+        print(place1, place2, date, times)
+        self.textBrowser.append(place1 + "\n ---> \n" + place2)
 
 
 app=QApplication(sys.argv)
 mainwindow=Menu()
 widget=QtWidgets.QStackedWidget()
 widget.addWidget(mainwindow)
+widget.setFixedWidth(600)
+widget.setFixedHeight(400)
 widget.setWindowTitle("Crypto")
 widget.show()
-app.exec_()  
+app.exec_()
