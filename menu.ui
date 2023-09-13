@@ -151,14 +151,29 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>310</x>
      <y>350</y>
-     <width>141</width>
-     <height>34</height>
+     <width>281</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Включить проверку</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>10</y>
+     <width>281</width>
+     <height>331</height>
+    </rect>
    </property>
   </widget>
  </widget>
