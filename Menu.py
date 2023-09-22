@@ -41,7 +41,7 @@ class Menu(QDialog):
         option.set_preference("dom.webdriver.enabled", False)
         option.set_preference("dom.webnotifications.enabled",False)
         option.set_preference("general.useragent.override",agent)
-        #option.add_argument('--headless')
+        option.add_argument('--headless') #Отвечает за скрытие работу эмулятора
         header = {
             "User-Agent":agent,
             "Accept":"*/*"
