@@ -60,6 +60,7 @@ class Menu(QDialog):
                     current_time = now.strftime("%H:%M:%S") 
                     print( current_time, " - места появились " + MyTicket.text)
                     bot.send_message(MyID, "Появились места: " + MyTicket.text)
+                    self.textBrowser.append(f"{current_time} - места появились {MyTicket.text}")
                     notification.notify(
                     title='Билет на поезд',
                     message='Места появились !')
@@ -67,6 +68,7 @@ class Menu(QDialog):
                     now = datetime.now() 
                     current_time = now.strftime("%H:%M:%S") 
                     print("Мест нет: ", current_time)
+                    self.textBrowser.append(f"\nМест нет: {current_time}")
                 time.sleep(55)
             except:
                 time.sleep(25)
